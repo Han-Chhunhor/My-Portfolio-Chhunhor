@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== CSS ចាស់របស់អ្នក (Portfolio Styles) ===== */
+@media (max-width: 380px) {
+  .hero-title-inbio {
+    font-size: 15px;
+  }
+  .hero-bio-inbio {
+    font-size: 13px;
+  }
+  .main-content {
+    padding: 10px 8px !important;
+  }
+  section h2 {
+    font-size: 16px !important;
+  }
+  .summary-box {
+    padding: 12px 14px !important;
+  }
+  .summary-box p,
+  .summary-box ul li,
+  .edu-item h4,
+  .exp-item h4,
+  .exp-item ul li {
+    font-size: 12px !important;
+  }
+}
+/* សម្រាប់ទំព័រ Schedule តែប៉ុណ្ណោះ */
+.schedule-page {
+  padding: 0 !important;
+  max-width: 100% !important;
+}
