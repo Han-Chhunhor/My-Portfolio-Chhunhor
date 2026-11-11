@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Sidebar from "./components/Sidebar";
+import TopNav from "./components/TopNav";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Resume from "./pages/Resume";
@@ -24,9 +24,9 @@ function App() {
   };
 
   return (
-    <div className={`app-container ${theme === "dark" ? "dark" : ""}`}>
-      <Sidebar theme={theme} toggleTheme={toggleTheme} />
-      <main className="main-content">
+    <div className={`app-container site-shell ${theme === "dark" ? "dark" : ""}`}>
+      <TopNav theme={theme} toggleTheme={toggleTheme} />
+      <main className="main-content site-content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

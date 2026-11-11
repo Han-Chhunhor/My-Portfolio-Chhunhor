@@ -30,8 +30,6 @@ body.dark-mode {
 
 /* ===== 3. RESET & BASE ===== */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 html {
@@ -1637,5 +1635,106 @@ body.dark-mode .form-group textarea {
     display: flex !important;
     align-items: center !important;
     gap: 6px !important;
+  }
+}
+
+/* Light InBio shell shared by the redesigned home page and its routes. */
+body {
+  min-height: 100vh;
+  padding: 0 !important;
+  background: #ecf0f3;
+  color: #1e293b;
+}
+
+.app-container.site-shell {
+  display: block;
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: #ecf0f3;
+  box-shadow: none;
+}
+
+.site-shell .site-content {
+  width: 100%;
+  max-width: 1280px;
+  min-height: calc(100vh - 66px);
+  margin: 0 auto;
+  padding: 0 40px 36px !important;
+  border-radius: 0;
+  background: transparent;
+}
+
+.site-header {
+  color: #1e293b;
+}
+
+.typewriter-role {
+  display: inline-block;
+  min-height: 1.15em;
+  border-right: 2px solid #ff014f;
+  padding-right: 3px;
+  animation: typewriter-caret 0.85s steps(1, end) infinite;
+}
+
+@keyframes typewriter-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+body.dark-mode .app-container.site-shell {
+  background: #0f172a;
+}
+
+body.dark-mode .site-header {
+  border-color: #334155;
+  background: rgba(15, 23, 42, 0.92);
+  color: #f8fafc;
+}
+
+body.dark-mode .site-nav {
+  background: #0f172a;
+}
+
+body.dark-mode .site-shell .site-content {
+  background: transparent;
+  color: #f8fafc;
+}
+
+body.dark-mode .home-inbio h1,
+body.dark-mode .home-inbio h2,
+body.dark-mode .home-inbio h3,
+body.dark-mode .home-inbio p,
+body.dark-mode .site-header a,
+body.dark-mode .site-header button {
+  color: #f8fafc;
+}
+
+@media (max-width: 1023px) {
+  .site-shell .site-content {
+    padding-right: 28px !important;
+    padding-left: 28px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-shell .site-content {
+    padding: 0 20px 28px !important;
+  }
+
+  .home-inbio {
+    overflow: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typewriter-role {
+    border-right: 0;
+    animation: none;
   }
 }
